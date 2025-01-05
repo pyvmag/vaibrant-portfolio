@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vaibhav </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #FF6B6B;
+            --secondary: #4ECDC4;
+            --dark: #2C3E50;
+            --light: #F7F7F7;
+        }
+
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: var(--light);
+            overflow-x: hidden;
+        }
+
+        .neubrutalism {
+            border: 4px solid var(--dark);
+            box-shadow: 8px 8px 0 var(--dark);
+            transition: all 0.2s ease;
+        }
+
+        .neubrutalism:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 12px 12px 0 var(--dark);
+        }
+
+        .nav-link {
+            font-weight: bold;
+            color: var(--dark) !important;
+            margin: 0 10px;
+            padding: 8px 16px !important;
+        }
+
+        .nav-link:hover {
+            background-color: var(--primary);
+            color: white !important;
+        }
+
+        .hero-section {
+            background-color: var(--secondary);
+            min-height: 100vh;
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .skill-card {
+            background-color: white;
+            padding: 20px;
+            margin: 15px 0;
+        }
+
+        .project-card {
+            background-color: rgb(246, 249, 247);
+            height: 100%;
+        }
+
+        .timeline-item {
+            border-left: 4px solid var(--primary);
+            padding-left: 20px;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: var(--primary);
+            position: absolute;
+            left: -12px;
+            top: 0;
+            border-radius: 50%;
+        }
+
+        .theme-switch {
+            position: fixed;
+            bottom: 20px;
+            left: 20px;
+            z-index: 1000;
+        }
+
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        [data-theme="dark"] {
+            background-color: var(--dark);
+            color: var(--light);
+        }
+
+        .social-icon {
+            font-size: 2rem;
+            margin: 0 10px;
+            color: var(--dark);
+        }
+
+        .social-icon:hover {
+            color: var(--primary);
+        }
+
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 50px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner-border text-primary" role="status">
+            <span class="visually-hidden">hello...</span>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top neubrutalism">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">V.</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://hashnode.com/@pyvmag">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h1 class="display-4 fw-bold mb-4">Hi, I'm Vaibhav</h1>
+                    <h2 class="h3 mb-4">A Data Enthusiast and Tech Explorer</h2>
+                    <div class="d-flex gap-3">
+                        <button class="btn btn-dark btn-lg neubrutalism">Explore My Work</button>
+                        <button class="btn btn-outline-dark btn-lg neubrutalism">Contact Me</button>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <img src="./img/pxArt.png" 
+                         alt="Tech Illustration" 
+                         class="img-fluid neubrutalism">
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Skills Section -->
+<section id="skills" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold">Core Skills</h2>
+        <div class="row">
+            <div class="col-md-4 mb-4" data-aos="flip-left">
+                <div class="skill-card neubrutalism">
+                    <i class="bi bi-code-slash fs-1 text-primary mb-3"></i>
+                    <h3>Programming Languages</h3>
+                    <p>Java (Intermediate), Python (Intermediate), C (Good), JavaScript (Basic)</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-delay="100">
+                <div class="skill-card neubrutalism">
+                    <i class="bi bi-cloud-fill fs-1 text-primary mb-3"></i>
+                    <h3>Cloud Technologies</h3>
+                    <p>AWS EC2, AWS Glue, AWS S3, GCP BigQuery, Google Compute Engine</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-delay="200">
+                <div class="skill-card neubrutalism">
+                    <i class="bi bi-bar-chart-fill fs-1 text-primary mb-3"></i>
+                    <h3>Data Science & Machine Learning</h3>
+                    <p>Python, SQL, Tableau, Power BI, Seaborn, matplotlib</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-delay="300">
+                <div class="skill-card neubrutalism">
+                    <i class="bi bi-database-fill fs-1 text-primary mb-3"></i>
+                    <h3>Database Systems</h3>
+                    <p>MySQL, PostgreSQL, AWS Aurora, SQL Server, BigQuery</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4" data-aos="flip-left" data-aos-delay="400">
+                <div class="skill-card neubrutalism">
+                    <i class="bi bi-tools fs-1 text-primary mb-3"></i>
+                    <h3>Tools & Technologies</h3>
+                    <p>GitHub, Jira/ClickUp, Canva, Raptor, Overleaf, Draw.io</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section -->
+<section id="projects" class="py-5 bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold">Featured Projects</h2>
+        <div class="row">
+            <!-- Project 1 -->
+            <div class="col-md-6 mb-4" data-aos="zoom-in">
+                <div class="project-card neubrutalism h-100 d-flex flex-column">
+                    <img src="img/Screenshot 2024-12-15 152826.png" 
+                         class="card-img-top" 
+                         alt="European Football League Analysis">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h5 class="card-title">European Football League Analysis</h5>
+                        <p class="card-text">
+                            Developed an interactive football analytics dashboard using Streamlit for 
+                            real-time insights into top European football leagues.
+                        </p>
+                        <button class="btn btn-primary neubrutalism mt-3 align-self-start" data-bs-toggle="modal" data-bs-target="#projectModal1">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="col-md-6 mb-4" data-aos="zoom-in" data-aos-delay="100">
+                <div class="project-card neubrutalism h-100 d-flex flex-column">
+                    <img src="https://deeplobe.ai/wp-content/uploads/2023/06/What-are-The-Top-20-Industries-Using-OCR_.png" 
+                         class="card-img-top" 
+                         alt="Optical Character Recognition">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h5 class="card-title">Optical Character Recognition</h5>
+                        <p class="card-text">
+                            Developed an OCR application using Tesseract and OpenCV to extract text 
+                            from images with high accuracy.
+                        </p>
+                        <button class="btn btn-primary neubrutalism mt-3 align-self-start" data-bs-toggle="modal" data-bs-target="#projectModal2">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Theme Toggle -->
+    <button class="btn btn-dark neubrutalism theme-switch">
+        <i class="bi bi-moon-fill"></i>
+    </button>
+
+
+
+    <!-- Project Modals -->
+    <div class="modal fade" id="projectModal1" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content neubrutalism">
+                <div class="modal-header">
+                    <h5 class="modal-title">European Football League Analysis</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>A comprehensive study using tools like Streamlit, Jupyter, and SQL to analyze football match data, player performance, and team metrics across European leagues.</p>
+                    <div class="tech-stack">
+                        <span class="badge bg-primary me-2">Python</span>
+                        <span class="badge bg-primary me-2">Streamlit</span>
+                        <span class="badge bg-primary me-2">SQL</span>
+                        <span class="badge bg-primary">Jupyter</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://www.linkedin.com/posts/activity-7266385008276221952-tUYV?utm_source=share&utm_medium=member_desktop" class="btn btn-danger neubrutalism">View on LinkedIn</a>
+                    <a href="https://github.com/pyvmag/football-dashboard" class="btn btn-primary neubrutalism">View on GitHub</a>
+                    <button type="button" class="btn btn-secondary neubrutalism" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="projectModal2" tabindex="-1">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content neubrutalism">
+                <div class="modal-header">
+                    <h5 class="modal-title">Optical Character Recognition</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Created an OCR tool using Tesseract and OpenCV for accurate text extraction from images. Features include image preprocessing and a user-friendly interface.</p>
+                    <div class="tech-stack">
+                        <span class="badge bg-primary me-2">Python</span>
+                        <span class="badge bg-primary me-2">Tesseract</span>
+                        <span class="badge bg-primary">OpenCV</span>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a href="https://github.com/pyvmag/ocr-project" class="btn btn-primary neubrutalism">View on GitHub</a>
+                    <button type="button" class="btn btn-secondary neubrutalism" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section id="contact" class="py-5">
+    <div class="container">
+        <h2 class="text-center mb-5 fw-bold">Get in Touch</h2>
+        <div class="row">
+            <div class="col-lg-6 mb-4">
+                <form class="neubrutalism p-4">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control neubrutalism" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control neubrutalism" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control neubrutalism" id="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary neubrutalism">Send Message</button>
+                </form>
+            </div>
+            <div class="col-lg-6">
+                <div class="neubrutalism p-4">
+                    <h3 class="mb-4">Connect With Me</h3>
+                    <div class="d-flex justify-content-start mb-4">
+                        <a href="https://www.linkedin.com/in/vaibhavmagdum1528/" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                        <a href="https://github.com/pyvmag" class="social-icon"><i class="bi bi-github"></i></a>
+                        
+                    </div>
+                    <div id="map" class="neubrutalism" style="height: 300px; background-color: #eee;">
+                        <!-- Map will be inserted here via JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true
+        });
+
+        // Preloader
+        window.addEventListener('load', () => {
+            document.querySelector('.preloader').style.display = 'none';
+        });
+
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollScrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Theme Toggle
+        const themeBtn = document.querySelector('.theme-switch');
+        themeBtn.addEventListener('click', () => {
+            document.body.dataset.theme = document.body.dataset.theme === 'dark' ? 'light' : 'dark';
+            themeBtn.querySelector('i').classList.toggle('bi-sun-fill');
+            themeBtn.querySelector('i').classList.toggle('bi-moon-fill');
+        });
+
+        // Form Validation
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            if (form.checkValidity()) {
+                alert('Message sent successfully!');
+                form.reset();
+            }
+        });
+
+        // Simple Map Placeholder
+        const map = document.getElementById('map');
+        map.innerHTML = `
+            <div class="d-flex justify-content-center align-items-center h-100">
+                <p class="mb-0">Map Loading...</p>
+            </div>
+        `;
+    </script>
+
+
+
+<script src="https://cdn.botpress.cloud/webchat/v2.2/inject.js"></script>
+<script src="https://files.bpcontent.cloud/2024/12/27/14/20241227141552-ESEYUOM4.js"></script>
+    
+
+</body>
+</html>
