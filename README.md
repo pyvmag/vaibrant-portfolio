@@ -21,6 +21,9 @@ Welcome to my personal portfolio website! This project is a blend of creativity 
 - **Bootstrap Icons**
 - **AI Chatbot Integration**
 
+[Click here to watch the demo]("D:\portfolio web\vaibrant\sample.mp4")
+
+
 ## How to Run 🖥️
 
 1. Clone the repository:
